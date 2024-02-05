@@ -1,5 +1,6 @@
 console.log("Web serverni boshlash");
 const express = require('express')
+const res = require('express/lib/response')
 const app = express();
 const http =require('http')
 
@@ -15,13 +16,15 @@ app.set('views', 'views');
 app.set('view engine', 'ejs');
 
 // 4: Routing code
-app.get('/hello', function(req, res) {
-   res.end(`<h1>Hello World by Brain</h1>`)
+app.post('/create-item', (req, res)=>{
+    console.log(req.body)
+    res.json({test: 'success'})
 })
 
-app.get('/gift', function(req, res) {
-    res.end(`<h1>siz sovgalar bolimidasiz</h1>`)
- })
+app.get('/', function(req, res) {
+   res.render(`harid.ejs`)
+})
+
 
 const server = http.createServer(app);
 let PORT = 3000;

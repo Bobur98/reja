@@ -1,0 +1,17 @@
+{
+    "name": "Brain",
+    "profession": "Software Engineer",
+    "age": 25,
+    "residence": "S.Korea",
+    "freelance": "available",
+    "address": "S.Korea, Seoul",
+    "language": ["Uzbek", "Korean", "English", "Russian"],
+    "skills": ["Html", "Css", "Js", "NodeJS", "NestJS"],
+    "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "MUI"],
+    "work_place": "1024 company",
+    "service_desc": "Front End developer",
+    "about_me": "Hardworking and passionate jobseeker with strong organizational skills eager to secure entry-level Web developer position in Front-end environment. Ready to help team achieve company goals.",
+    "city": "Seoul",
+    "title": "Software engineer in Google company",
+    "my_services": "Hi, I'm a full stack developer specializing in web and mobile development, database management, security, and performance optimization. I offer comprehensive solutions, including consulting, training, and ongoing support, to ensure clients receive top-notch services and satisfaction."
+}

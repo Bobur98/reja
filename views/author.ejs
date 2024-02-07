@@ -1,0 +1,283 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    
+    <link rel="stylesheet" href="/author/main.css" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/00c8a4a88f.js" crossorigin="anonymous"></script> -->
+    
+</head>
+
+<body>
+   <div class="frame">
+
+     <div class="main-frame">
+      <!-- LEFT FRAME -->
+         <div class="left-frame">
+            <div class="left-frame_img">
+              <div class="profile-img">
+                <img style="width: 156; height: 137;" src="/author/images/profile.png" />
+              </div>
+              <div class="name-wrapper">
+                <div class="name"><%=user.name%></div>
+                <div class="profession"><%=user.profession%></div>
+              </div>
+              <div class="profile-icons">
+                  <a class="link-href">
+                    <div class="icon">
+                      <img src="/author/icons/facebook.png" class="icon-1"/>
+                    </div>
+                  </a>
+                  <a class="link-href">
+                    <div class="icon">
+                      <img src="/author/icons/instagram.png" class="icon-1"/>
+                    </div>
+                  </a>
+                  <a class="link-href">
+                    <div class="icon">
+                      <img src="/author/icons/twitter.png" class="icon-1"/>
+                    </div>
+                  </a>
+                  <a class="link-href">
+                    <div class="icon">
+                      <img src="/author/icons/linkedIn.png" class="icon-1"/>
+                    </div>
+                  </a>
+                  <a class="link-href">
+                    <div class="icon">
+                      <img src="/author/icons/youtube.png" class="icon-1"/>
+                    </div>
+                  </a>
+                  <a class="link-href">
+                    <div class="icon">
+                      <img src="/author/icons/browser.png" class="icon-1"/>
+                    </div>
+                  </a>
+              </div>
+            </div>
+            <div class="left-frame_line"></div>
+            <div class="left-frame_info">
+              <div class="info1">
+                <div class="bg-yelloww">Age:</div>
+                <div class="blackk"><%=user.age%></div>
+              </div>
+              <div class="info1">
+                <div class="bg-yelloww">Residence:</div>
+                <div class="blackk"><%=user.residence%></div>
+              </div>
+              <div class="info1">
+                <div class="bg-yelloww">Freelance:</div>
+                <div class="available"><%=user.freelance%></div>
+              </div>
+              <div class="info1">
+                <div class="bg-yelloww">Address:</div>
+                <div class="blackk"><%=user.address%></div>
+              </div>
+            </div>
+            <div class="left-frame_line"></div>
+            <div class="left-frame_lang">
+              <div class="left-title">Languages</div>
+              <div class="wrapper">
+                <div class="lang-wrapper">
+                  <div class="languages"><%=user.language[0]%></div>
+                  <div class="present">100%</div>
+                </div>                
+                <div class="bar bar1"></div>
+              </div>
+              <div class="wrapper">
+                <div class="lang-wrapper">
+                  <div class="languages"><%=user.language[1]%></div>
+                  <div class="present">45%</div>
+                </div>
+                <div class="bar bar2"></div>
+              </div>
+              <div class="wrapper">
+                <div class="lang-wrapper">
+                  <div class="languages"><%=user.language[2]%></div>
+                  <div class="present">90%</div>
+                </div>                
+                <div class="bar bar3"></div>
+              </div>
+              <div class="wrapper">
+                <div class="lang-wrapper">
+                  <div class="languages"><%=user.language[3]%></div>
+                  <div class="present">70%</div>
+                </div>                
+                <div class="bar bar4"></div>
+              </div>
+            </div>
+
+            <div class="left-frame_line line3"></div>
+            <div class="left-frame_skill">
+              <div class="left-title">Skills</div>
+              <% user.skills.forEach((skill, index) => { %>
+                <div class="wrapper">
+                  <div class="lang-wrapper">
+                    <div class="languages"><%= skill %></div>
+                    <div class="present">
+                      <% if (index === 0) { %>90%
+                      <% } else if (index === 1) { %>75%
+                      <% } else { %>85% <% } %>
+                    </div>
+                  </div>
+                  <div class="bar bar<%= index + 1 %>"></div>
+                </div>
+              <% }) %>
+            </div>
+            
+            <div class="left-frame_line line4"></div>
+            <div class="left-frame_extra">
+              <div class="left-title">Extra skills</div>
+              <div class="skill-wrapper">
+                <div>
+                  <img width="15px" height="15px" src="/author/icons/skills.png"/>
+                </div>
+                <div><%=user.extra_skills[0]%></div>
+              </div>
+              <div class="skill-wrapper">
+                <div>
+                  <img width="15px" height="15px" src="/author/icons/skills.png"/>
+                </div>
+                <div><%=user.extra_skills[1]%></div>
+              </div>
+              <div class="skill-wrapper">
+                <div>
+                  <img width="15px" height="15px" src="/author/icons/skills.png"/>
+                </div>
+                <div><%=user.extra_skills[2]%></div>
+              </div>
+            </div>
+            <div class="left-frame_line line5"></div>
+         </div>
+         
+         <!-- MID FRAME -->
+         <div class="midd-frame">
+            <div class="self-description_container">
+              <div class="shapes yellow-cicle_top"></div>
+              <div class="shapes green-cicle_top"></div>
+              <div class="shapes yellow-rectengle"></div>
+              <div class="shapes green-cicle_bottom"></div>
+              <div class="shapes blue-rectengle"></div>
+              <div class="shapes yellow-cicle_bottom"></div>
+              <div class="shapes trianglee">
+                <img  src="/author/icons/triangle.svg" />
+              </div>
+              <div class="discription-wrapper">
+                <div class="title"><%=user.title%></div>
+                <div class="sub-title"><%=user.about_me%></div>
+                <button class="hire-btn">hire me
+                  <img width="10.67px" height="10.37px" src="/author/icons/rightArrow.png" />
+                </button>
+              </div>
+            </div>
+            <div class="middle-container">
+              <div class="my-services">My Services</div>
+              <div class="my-services_desc"><%=user.my_services%></div>
+            </div>
+            <div class="service-container">
+              <div class="grid-container">
+                <div class="grid-item">
+                  <div>
+                    <img src="/author/icons/web.png" />
+                  </div>
+                  <div class="service-title">Web Development</div>
+                  <div class="service-sub_title">Blog, E-commerce</div>
+                </div>
+                <div class="grid-item">
+                  <div>
+                    <img src="/author/icons/design.png" />
+                  </div>
+                  <div class="service-title">UI/UX Design</div>
+                  <div class="service-sub_title">Mobile App, Website Design</div>
+                </div>
+                <div class="grid-item">
+                  <div>
+                    <img src="/author/icons/microphone.png" />
+                  </div>
+                  <div class="service-title">Sound Design</div>
+                  <div class="service-sub_title">Voice Over, Beat Making </div>
+                </div>  
+                <div class="grid-item">
+                  <div>
+                    <img src="/author/icons/game.png" />
+                  </div>
+                  <div class="service-title">Game Design</div>
+                  <div class="service-sub_title">Character Design, Props & Objects</div>
+                </div>
+                <div class="grid-item">
+                  <div>
+                    <img src="/author/icons/photography.png" />
+                  </div>
+                  <div class="service-title">Photography</div>
+                  <div class="service-sub_title">Portrait, Product Photography</div>
+                </div>
+                <div class="grid-item">
+                  <div class="service-title">
+                    Advertising
+                  </div>
+                  <div class="service-sub_title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi.</div>
+                    <button class="order-btn">order now <img class="order-icon" src="/author/icons/arrowOrder.png" /></button>
+                  
+                </div>    
+              </div>
+            </div>
+         </div>
+         <!-- RIGHT FRAME -->
+         <div class="right-frame">
+            <div class="toggle-icon">
+              <img class="icon" src="/author/icons/toggle.png"/>
+            </div>
+            <div class="icon-wrapper active">
+              <img class="icon" src="/author/icons/home.png"/>
+               <div class="tooltip-text">Home
+                <div class="triangle"> </div>
+               </div>
+            </div>
+            <div class="icon-wrapper">
+              <img class="icon" src="/author/icons/code.png"/>
+               <div class="tooltip-text">Web page
+                <div class="triangle"> </div>
+
+               </div>
+            </div>
+            <div class="icon-wrapper">
+              <img class="icon" src="/author/icons/school.png"/>
+               <div class="tooltip-text">School
+                <div class="triangle"> </div>
+
+               </div>
+            </div>
+            <div class="icon-wrapper">
+              <img  src="/author/icons/portfolio.png"/>
+               <div class="tooltip-text">Portfolio
+                <div class="triangle"> </div>
+
+               </div>
+            </div>
+            <div class="icon-wrapper">
+              <img class="icon" src="/author/icons/rectangle.png"/>
+               <div class="tooltip-text">Services
+                <div class="triangle"> </div>
+
+               </div>
+            </div>
+            <div class="icon-wrapper">
+              <img class="icon" src="/author/icons/message.png"/>
+               <div class="tooltip-text">Message
+                <div class="triangle"> </div>
+
+               </div>
+            </div>
+         </div>
+     </div>
+
+   </div>
+</body>
+
+</html>

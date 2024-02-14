@@ -14,6 +14,34 @@ function countDigits(str) {
 
 console.log(countDigits('seff56fes11'));
 
+
+// CHALLENGE TASK
+
+const animal_list = ['fox', 'ant', 'bird', 'lion', 'wolf', 'deer', 'bear', 'frog', 'hen', 'mole', 'duck', 'goat', 'dog', 'cat', 'bat', 'cock', 'cow'];
+
+function findAnimals(txt) {
+    const foundAnimals = [];
+    for (const animal of animal_list) {
+       let isAnimal = true;
+       for (const char of animal) {
+        if (!txt.includes(char)){
+            isAnimal = false;
+            break;
+        }
+       }
+       
+       if(isAnimal){
+           foundAnimals.push(animal)
+        } 
+
+    }
+    return foundAnimals;
+
+}
+
+const javob = findAnimals('ablnitrodn');
+console.log("javob", javob);
+
 // // A-TASK
 // let count = 0;
 

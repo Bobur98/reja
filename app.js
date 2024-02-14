@@ -6,7 +6,7 @@ const app = express();
 
 // call mongodb
 const db = require('./server.js').db();
-
+const mongodb = require('mongodb')
 
 // let user;
 
@@ -33,14 +33,18 @@ app.set('view engine', 'ejs');
 app.post('/create-item', (req, res)=>{
     const new_reja = req.body.reja;
     db.collection('plans').insertOne({reja: new_reja}, (err, data) => {
-        if (err) {
-            console.log(err)
-            res.end('something went wrong')
-        } else {
-            res.end('successfully added')
-        }
+        res.json(data.ops[0])
     })
 })
+
+app.post('/delete-item', (req, res)=>{
+    const id = req.body.id;
+    db.collection('plans')
+        .deleteOne({_id: new mongodb.ObjectId(id) }, function (err, data) {
+            res.json({state: 'success'})
+         })
+})
+
 
 app.get('/', function(req, res) {
     console.log('user entered /');
@@ -49,7 +53,7 @@ app.get('/', function(req, res) {
             console.log(err);
             res.end('Someting went wrong')
         } else {
-            res.render('reja', {item: data})
+            res.render('reja', {items: data ? data : ''})
         }
     })
 })

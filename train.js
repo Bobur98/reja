@@ -1,46 +1,109 @@
-// B-TASK
+// C-TASK
 
-function countDigits(str) {
-    let count = 0;
-    for(let i = 0; i <= str.length; i++) {
-       if(parseInt(str[i])) count++
+const moment = require("moment");
+let time = moment().format('LT')
+class Shop {
+    
+    constructor(non, lagmon, cola){
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola
+  }
+  
+  
+  qoldiq () {
+    return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+  }
+
+  sotish (item, amount) {
+    // non
+     if(item === 'non'){
+       if (this.non >= amount){
+            this.non -= amount;   
+        } 
     }
-    return count
+
+     if(item === 'lagmon') {
+       if (this.lagmon >= amount) {
+            this.lagmon -= amount;
+     }
+    }
+     if(item === 'cola') {
+      if (this.cola >= amount) {
+            this.cola -= amount;
+        } 
+     }
+     
+     return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+
+  }
+
+
+  qabul (item, amount) {
+    // non
+     if(item === 'non'){
+       this.non += amount
+     }
+
+     if(item === 'lagmon'){
+        this.lagmon += amount
+     }
+
+     if(item === 'cola'){
+        this.cola += amount
+     }
+     return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+
+  }
+
+
+}
+
+let savdo = new Shop(6,5,2)
+console.log(savdo.qabul('non', 5));
+// // B-TASK
+
+// function countDigits(str) {
+//     let count = 0;
+//     for(let i = 0; i <= str.length; i++) {
+//        if(parseInt(str[i])) count++
+//     }
+//     return count
 
     
-//   const numbers = str.replace(/[^0-9]/g, '')
-//   return numbers.length
-}
+// //   const numbers = str.replace(/[^0-9]/g, '')
+// //   return numbers.length
+// }
 
-console.log(countDigits('seff56fes11'));
+// console.log(countDigits('seff56fes11'));
 
 
-// CHALLENGE TASK
+// // CHALLENGE TASK
 
-const animal_list = ['fox', 'ant', 'bird', 'lion', 'wolf', 'deer', 'bear', 'frog', 'hen', 'mole', 'duck', 'goat', 'dog', 'cat', 'bat', 'cock', 'cow'];
+// const animal_list = ['fox', 'ant', 'bird', 'lion', 'wolf', 'deer', 'bear', 'frog', 'hen', 'mole', 'duck', 'goat', 'dog', 'cat', 'bat', 'cock', 'cow'];
 
-function findAnimals(txt) {
-    const foundAnimals = [];
-    for (const animal of animal_list) {
-       let isAnimal = true;
-       for (const char of animal) {
-        if (!txt.includes(char)){
-            isAnimal = false;
-            break;
-        }
-       }
+// function findAnimals(txt) {
+//     const foundAnimals = [];
+//     for (const animal of animal_list) {
+//        let isAnimal = true;
+//        for (const char of animal) {
+//         if (!txt.includes(char)){
+//             isAnimal = false;
+//             break;
+//         }
+//        }
        
-       if(isAnimal){
-           foundAnimals.push(animal)
-        } 
+//        if(isAnimal){
+//            foundAnimals.push(animal)
+//         } 
 
-    }
-    return foundAnimals;
+//     }
+//     return foundAnimals;
 
-}
+// }
 
-const javob = findAnimals('ablnitrodn');
-console.log("javob", javob);
+// const javob = findAnimals('ablnitrodn');
+// console.log("javob", javob);
 
 // // A-TASK
 // let count = 0;

@@ -1,66 +1,82 @@
-// C-TASK
+// D-TASK
+function checkContent(str1, str2) {
 
-const moment = require("moment");
-let time = moment().format('LT')
-class Shop {
-    
-    constructor(non, lagmon, cola){
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola
-  }
+  const sortedStr1 =  str1.split('').sort().join("");
+  const sortedStr2 =  str2.split('').sort().join("");
   
-  
-  qoldiq () {
-    return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
-  }
-
-  sotish (item, amount) {
-    // non
-     if(item === 'non'){
-       if (this.non >= amount){
-            this.non -= amount;   
-        } 
-    }
-
-     if(item === 'lagmon') {
-       if (this.lagmon >= amount) {
-            this.lagmon -= amount;
-     }
-    }
-     if(item === 'cola') {
-      if (this.cola >= amount) {
-            this.cola -= amount;
-        } 
-     }
-     
-     return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
-
-  }
-
-
-  qabul (item, amount) {
-    // non
-     if(item === 'non'){
-       this.non += amount
-     }
-
-     if(item === 'lagmon'){
-        this.lagmon += amount
-     }
-
-     if(item === 'cola'){
-        this.cola += amount
-     }
-     return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
-
-  }
-
-
+  return sortedStr1 === sortedStr2;
 }
 
-let savdo = new Shop(6,5,2)
-console.log(savdo.qabul('non', 5));
+console.log(checkContent('mitgroup','groupmit'));
+
+// // C-TASK
+
+// const moment = require("moment");
+// let time = moment().format('LT')
+// class Shop {
+    
+//     constructor(non, lagmon, cola){
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola
+//   }
+  
+  
+//   qoldiq () {
+//     return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+//   }
+
+//   sotish (item, amount) {
+//     // non
+//      if(item === 'non'){
+//        if (this.non >= amount){
+//             this.non -= amount;   
+//         } 
+//     }
+
+//      if(item === 'lagmon') {
+//        if (this.lagmon >= amount) {
+//             this.lagmon -= amount;
+//      }
+//     }
+//      if(item === 'cola') {
+//       if (this.cola >= amount) {
+//             this.cola -= amount;
+//         } 
+//      }
+     
+//      return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+
+//   }
+
+
+//   qabul (item, amount) {
+//     // non
+//      if(item === 'non'){
+//        this.non += amount
+//      }
+
+//      if(item === 'lagmon'){
+//         this.lagmon += amount
+//      }
+
+//      if(item === 'cola'){
+//         this.cola += amount
+//      }
+//      return `hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`
+
+//   }
+
+
+// }
+
+// let savdo = new Shop(6,5,2)
+// console.log(savdo.qabul('non', 5));
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+
 // // B-TASK
 
 // function countDigits(str) {
@@ -77,6 +93,10 @@ console.log(savdo.qabul('non', 5));
 
 // console.log(countDigits('seff56fes11'));
 
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 // // CHALLENGE TASK
 
@@ -104,6 +124,10 @@ console.log(savdo.qabul('non', 5));
 
 // const javob = findAnimals('ablnitrodn');
 // console.log("javob", javob);
+
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////
 
 // // A-TASK
 // let count = 0;

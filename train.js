@@ -1,13 +1,27 @@
-// D-TASK
-function checkContent(str1, str2) {
+// E-TASK
 
-  const sortedStr1 =  str1.split('').sort().join("");
-  const sortedStr2 =  str2.split('').sort().join("");
+function getReverse(str) {
+    let reversedStr = "";
+    for (let i = str.length - 1; i >= 0; i--) {
+      reversedStr += str[i];
+    }
+    return reversedStr;
+
+  }
+
+  console.log(getReverse('hello'));
+
+
+// // D-TASK
+// function checkContent(str1, str2) {
+
+//   const sortedStr1 =  str1.split('').sort().join("");
+//   const sortedStr2 =  str2.split('').sort().join("");
   
-  return sortedStr1 === sortedStr2;
-}
+//   return sortedStr1 === sortedStr2;
+// }
 
-console.log(checkContent('mitgroup','groupmit'));
+// console.log(checkContent('mitgroup','groupmit'));
 
 // // C-TASK
 

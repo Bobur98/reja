@@ -1,15 +1,32 @@
-// E-TASK
-
-function getReverse(str) {
-    let reversedStr = "";
-    for (let i = str.length - 1; i >= 0; i--) {
-      reversedStr += str[i];
-    }
-    return reversedStr;
-
+// F-TASK
+function findDoublers(str) {
+  let doubles = [];
+  for (let i = 0; i < str.length; i++) {
+      let char = str[i];
+      if (doubles.includes(char)) {
+          return true; 
+      } else {
+          doubles.push(char); 
+      }
   }
+  
+  return false;
+}
 
-  console.log(getReverse('hello'));
+console.log(findDoublers('hello'));
+
+// // E-TASK
+
+// function getReverse(str) {
+//     let reversedStr = "";
+//     for (let i = str.length - 1; i >= 0; i--) {
+//       reversedStr += str[i];
+//     }
+//     return reversedStr;
+
+//   }
+
+//   console.log(getReverse('hello'));
 
 
 // // D-TASK

@@ -13,10 +13,12 @@
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@types/morgan": "^1.9.9",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "moment": "^2.30.1",
     "mongodb": "^3.2.6",
+    "morgan": "^1.10.0",
     "nodemon": "^3.0.3"
   }
 }
